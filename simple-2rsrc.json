@@ -1,0 +1,102 @@
+{
+    "FSSN1": {
+        "id": 1,
+        "type": "node",
+        "resources": 
+		{"ram": 4096,
+         "storage" : 8192},
+	"latencies":
+		{"n11":0,
+         "n12":3,
+		 "n13":4,
+         "n14":5,
+         "n15":6}
+	},
+
+
+    "FSSN2": {
+        "id" : 2,
+        "type": "node",
+        "resources": 
+		{"ram": 4096,
+         "storage" : 8192},
+	"latencies":
+		{"n21":3,
+         "n22":0,
+		 "n23":5,
+         "n24":6,
+         "n25":7}
+	},
+
+    "FSSN3": {
+        "id" : 3,
+        "type": "node",
+        "resources": 
+		{"ram": 4096,
+         "storage" : 16384},
+	"latencies":
+		{"n31":4,
+		 "n32":5,
+         "n33":0,
+         "n34":7,
+         "n35":8}
+	},
+
+    "FSSN4": {
+        "id" : 4,
+        "type": "node",
+        "resources": 
+		{"ram": 4096,
+         "storage" : 8192},
+	"latencies":
+		{"n41":5,
+		 "n42":6,
+         "n43":7,
+         "n44":0,
+         "n45":9}
+	},     
+
+    "FSSN5": {
+        "id" : 5,
+        "type": "node",
+        "resources": 
+		{"ram": 4096,
+         "storage" : 8192},
+	"latencies":
+		{"n51":6,
+		 "n52":7,
+         "n53":8,
+         "n54":9,
+         "n55":0}
+	},        
+
+    "APP1": {
+        "type": "app",
+        "resources": 
+		{"ram":0,
+         "storage" : 0},
+	"dependencies":
+		{"local":"java",
+		 "nonlocal":["APP2", "APP3"]}
+	},
+
+    "APP2": {
+        "type": "app",
+        "resources": 
+		{"ram": 1024,
+         "storage" : 1024},
+	"dependencies":
+		{"local":"java",
+		 "nonlocal": []}
+	},
+
+    "APP3": {
+        "type": "app",
+        "resources": 
+		{"ram": 1024,
+         "storage" : 1024},
+	"dependencies":
+		{"local":"java",
+		 "nonlocal": []}
+	}
+}
